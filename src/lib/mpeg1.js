@@ -12,7 +12,7 @@ class MPEG1 extends BaseDecoder {
 
     this.onDecodeCallback = options.onVideoDecode;
 
-    const bufferSize = options.videoBufferSize || 512 * 1024;
+    const bufferSize = options.videoBufferSize || 1024 * 1024 * 4;
     const bufferMode = options.streaming ? BitBuffer.MODE.EVICT : BitBuffer.MODE.EXPAND;
 
     this.bits = new BitBuffer(bufferSize, bufferMode);
